@@ -1,3 +1,5 @@
+import Button from './UI/Button';
+
 const OrderSummary = (props) => {
   const ingredientSummary = Object.keys(props.ingredients).map((igKey) => {
     return (
@@ -15,7 +17,10 @@ const OrderSummary = (props) => {
       <ul>
           {ingredientSummary}
       </ul>
+      <p><strong>Total Price: {props.totalPrice.toFixed(2)} </strong></p>
       <p>Continue to Checkout?</p>
+      <Button btnType="Danger" clicked={props.purchaseCanceled}>CANCEL</Button>
+      <Button btnType="Success" clicked={props.purchaseContinue}>CONTINUE</Button>
     </div>
   );
 };
