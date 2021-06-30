@@ -1,11 +1,14 @@
-import classes from 'NavigationItems.module.css';
+import classes from "./NavigationItems.module.css";
 
 const NavigationItems = () => (
-    <ul className={classes.NavigationItems}>
-        <li><a href="#">A link</a></li>
-        <li><a href="#">A link</a></li>
-        <li><a href="#">A link</a></li>
-    </ul>
+  <ul className={classes.NavigationItems}>
+    <li className={classes.NavigationItem}>
+      <a href="/">Burger Builder</a>
+    </li>
+    <li className={classes.NavigationItem}>
+      <a href="/">Checkout</a>
+    </li>
+  </ul>
 );
 
 export default NavigationItems;
